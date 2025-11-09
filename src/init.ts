@@ -48,6 +48,5 @@ export async function init() {
         viewport.requestFullscreen.ifAvailable();
       }
     });
-    viewport.expand();
   }
 }
