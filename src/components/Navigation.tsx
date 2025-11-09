@@ -1,3 +1,6 @@
+import { useNavigate } from "react-router";
+import { ROUTES_NAMES } from "../constants/router";
+
 import NavButton from "./NavButton";
 
 import MoonCoinIcon from "../icons/MoonCoinIcon";
@@ -5,10 +8,15 @@ import CircleQuestionMarkIcon from "../icons/CircleQuestionMarkIcon";
 
 // TODO: update once constants for tarologist are ready
 export default function Navigation() {
+  const navigate = useNavigate();
+
   return (
     <section className="flex flex-col flex-1 justify-between gap-3">
       <div className="flex flex-col gap-3">
-        <NavButton index={0}>
+        <NavButton
+          index={0}
+          onClick={() => navigate(ROUTES_NAMES.CARD_OF_THE_DAY)}
+        >
           <div className="flex flex-1 justify-between items-center gap-4 font-bold text-2xl">
             <p className="font-semibold text-lg">Card of the day</p>
 
@@ -18,7 +26,7 @@ export default function Navigation() {
           </div>
         </NavButton>
 
-        <NavButton index={1}>
+        <NavButton index={1} onClick={() => navigate(ROUTES_NAMES.YES_NO)}>
           <div className="flex flex-1 justify-between items-center gap-4 font-bold text-2xl">
             <p className="font-semibold text-lg">Yes/No</p>
 
@@ -28,7 +36,10 @@ export default function Navigation() {
           </div>
         </NavButton>
 
-        <NavButton index={2}>
+        <NavButton
+          index={2}
+          onClick={() => navigate(ROUTES_NAMES.ASK_QUESTION)}
+        >
           <div className="flex flex-1 justify-between items-center gap-4 font-bold text-2xl">
             <p className="font-semibold text-lg">Ask a question</p>
 

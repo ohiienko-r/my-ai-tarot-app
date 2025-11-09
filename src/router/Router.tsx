@@ -6,6 +6,7 @@ import HomePage from "../pages/home/Home";
 import CardOfTheDayPage from "../pages/card-of-the-day/CardOfTheDay";
 import YesNoPage from "../pages/yes-no/YesNo";
 import AskQuestionPage from "../pages/ask-question/AskQuestion";
+import InformationPage from "../pages/information/Information";
 
 export default function Router() {
   return (
@@ -21,6 +22,8 @@ export default function Router() {
         <Route path={ROUTES_NAMES.YES_NO} element={<YesNoPage />} />
 
         <Route path={ROUTES_NAMES.ASK_QUESTION} element={<AskQuestionPage />} />
+
+        <Route path={ROUTES_NAMES.INFORMATION} element={<InformationPage />} />
       </Routes>
     </BrowserRouter>
   );

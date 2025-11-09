@@ -7,9 +7,9 @@ import {
   init as initSDK,
   miniApp,
   backButton,
-  retrieveLaunchParams,
+  // retrieveLaunchParams,
 } from "@tma.js/sdk-react";
-import { UNSUPPORTED_FULL_SCREEN_PLATFORMS } from "./constants/app";
+// import { UNSUPPORTED_FULL_SCREEN_PLATFORMS } from "./constants/app";
 
 export async function init() {
   initSDK();
@@ -40,13 +40,16 @@ export async function init() {
     viewport.mount().then(() => {
       viewport.bindCssVars();
 
-      if (
-        !UNSUPPORTED_FULL_SCREEN_PLATFORMS.includes(
-          retrieveLaunchParams().tgWebAppPlatform
-        )
-      ) {
-        viewport.requestFullscreen.ifAvailable();
-      }
+      // TODO: fixes required. Sometimes safe area insets are ignored
+      // if (
+      //   !UNSUPPORTED_FULL_SCREEN_PLATFORMS.includes(
+      //     retrieveLaunchParams().tgWebAppPlatform
+      //   )
+      // ) {
+      //   viewport.requestFullscreen.ifAvailable();
+      // }
     });
+
+    viewport.expand();
   }
 }
