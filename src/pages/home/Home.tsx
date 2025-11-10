@@ -6,6 +6,7 @@ import Navigation from "../../components/Navigation";
 import TarologistsPagerView from "../../components/TarologistsPagerView";
 
 import MoonCoinIcon from "../../icons/MoonCoinIcon";
+import PlusIcon from "../../icons/PlusIcon";
 
 export default function HomePage() {
   const lp = useLaunchParams();
@@ -18,8 +19,8 @@ export default function HomePage() {
         </h1>
 
         <button className="flex items-center border-0 outline-0">
-          <span className="z-10 flex justify-center items-center bg-green-600 -mr-2 rounded-full size-3.5 font-semibold shrink-0">
-            +
+          <span className="z-10 flex justify-center items-center bg-green-600 -mr-2 rounded-full size-3.5 shrink-0">
+            <PlusIcon className="size-3" />
           </span>
 
           <span className="bg-linear-to-r from-[#EA850F] to-[#FFC700] p-0.5 rounded-2xl size-fit">
