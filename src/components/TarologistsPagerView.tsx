@@ -14,7 +14,7 @@ export default function TarologistsPagerView({
         {tarologists.map((tarologist) => (
           <li
             key={tarologist.id}
-            className={`relative flex w-full flex-col justify-end items-start bg-cover bg-no-repeat shadow-md p-2 rounded-2xl h-48 overflow-hidden`}
+            className={`relative flex select-none w-full flex-col justify-end items-start bg-cover bg-no-repeat shadow-md p-2 rounded-2xl h-48 overflow-hidden`}
             style={{ backgroundImage: `url(${tarologist.bg})` }}
           >
             <h2 className="font-semibold text-6xl">{tarologist.name}</h2>
@@ -22,7 +22,7 @@ export default function TarologistsPagerView({
             <img
               src={tarologist.avatar}
               alt={`Tarologist ${tarologist.name}`}
-              className="top-2 right-0 absolute w-48 h-auto"
+              className="top-2 right-0 absolute w-48 h-auto pointer-events-none"
             />
           </li>
         ))}

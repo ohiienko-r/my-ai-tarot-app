@@ -17,12 +17,18 @@ export default function HomePage() {
           Hi, {lp?.tgWebAppData?.user?.first_name ?? "Dear User"}👋
         </h1>
 
-        <span className="bg-linear-to-r from-[#EA850F] to-[#FFC700] p-0.5 rounded-2xl size-fit">
-          <p className="flex items-center gap-1 bg-[#06080d] px-2 py-0.5 rounded-full font-medium text-sm">
-            <MoonCoinIcon className="size-4 text-white" />
-            100
-          </p>
-        </span>
+        <button className="flex items-center border-0 outline-0">
+          <span className="z-10 flex justify-center items-center bg-green-600 -mr-2 rounded-full size-3.5 font-semibold shrink-0">
+            +
+          </span>
+
+          <span className="bg-linear-to-r from-[#EA850F] to-[#FFC700] p-0.5 rounded-2xl size-fit">
+            <p className="flex items-center gap-1 bg-[#06080d] px-2 py-0.5 pl-3 rounded-full font-medium text-sm">
+              <MoonCoinIcon className="size-4 text-white" />
+              100
+            </p>
+          </span>
+        </button>
       </header>
 
       <TarologistsPagerView tarologists={TAROLOGISTS} />
