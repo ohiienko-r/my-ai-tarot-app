@@ -1,6 +1,9 @@
 import { useLaunchParams } from "@tma.js/sdk-react";
 
+import { TAROLOGISTS } from "../../constants/tarologists";
+
 import Navigation from "../../components/Navigation";
+import TarologistsPagerView from "../../components/TarologistsPagerView";
 
 import MoonCoinIcon from "../../icons/MoonCoinIcon";
 
@@ -22,22 +25,7 @@ export default function HomePage() {
         </span>
       </header>
 
-      {/* TODO: move to a separate component once tarologists qty starts growing */}
-      <div className="relative flex flex-col justify-end items-start bg-[url('/galaxy.png')] bg-cover bg-no-repeat shadow-md p-2 rounded-2xl h-48 overflow-hidden">
-        <h2 className="font-semibold text-6xl">Eva</h2>
-
-        <div className="z-10 flex justify-center items-center gap-1 w-full">
-          <span className="border border-white rounded-full size-1.5 shrink-0"></span>
-          <span className="bg-white rounded-full size-1.5 shrink-0"></span>
-          <span className="bg-white rounded-full size-1.5 shrink-0"></span>
-        </div>
-
-        <img
-          src="/eva.png"
-          alt="Tarologist Eva"
-          className="top-2 right-0 absolute w-48 h-auto"
-        />
-      </div>
+      <TarologistsPagerView tarologists={TAROLOGISTS} />
 
       <Navigation />
     </main>
