@@ -4,4 +4,5 @@ export const ROUTES_NAMES = {
   YES_NO: "/yes-no",
   ASK_QUESTION: "/ask-question",
   INFORMATION: "/information",
+  ABOUT: "/about",
 } as const;

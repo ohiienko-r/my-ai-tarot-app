@@ -5,14 +5,16 @@ export default function SafeAreaView({
   style,
   ...rest
 }: ComponentProps<"section">) {
-  const { top, bottom } = viewport.safeAreaInsets();
+  const { top, right, bottom, left } = viewport.safeAreaInsets();
   const contentSafeAreaInsetTop = viewport.contentSafeAreaInsetTop();
 
   return (
     <section
       style={{
         paddingTop: top + contentSafeAreaInsetTop,
+        paddingRight: right,
         paddingBottom: bottom,
+        paddingLeft: left,
         width: "100%",
         height: "100%",
         ...style,
