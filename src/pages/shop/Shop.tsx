@@ -1,18 +1,14 @@
 import useBackButton from "../../hooks/useBackButton";
 
-import Balance from "../../components/Balance";
 import BuyMoonCoinsButton from "./components/BuyMoonCoinsButton";
+import Header from "../../components/Header";
 
 export default function ShopPage() {
   useBackButton();
 
   return (
     <main className="flex flex-col gap-6 p-2 size-full overflow-y-auto">
-      <header className="flex justify-between items-center gap-2">
-        <h1 className="font-semibold text-lg">Take your time💫</h1>
-
-        <Balance balance={100} />
-      </header>
+      <Header />
 
       <section className="gap-2 grid grid-cols-[repeat(auto-fit,minmax(96px,1fr))]">
         <BuyMoonCoinsButton
