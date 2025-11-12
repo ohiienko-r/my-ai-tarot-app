@@ -1,9 +1,7 @@
 import useBackButton from "../../hooks/useBackButton";
 
 import Balance from "../../components/Balance";
-
-import MoonCoinIcon from "../../icons/MoonCoinIcon";
-import TelegramStarIcon from "../../icons/TelegramStarIcon";
+import BuyMoonCoinsButton from "./components/BuyMoonCoinsButton";
 
 export default function ShopPage() {
   useBackButton();
@@ -17,57 +15,25 @@ export default function ShopPage() {
       </header>
 
       <section className="gap-2 grid grid-cols-[repeat(auto-fit,minmax(96px,1fr))]">
-        <button className="flex flex-col justify-between justify-self-end items-center gap-2 bg-linear-to-b from-[#5760AD] to-[#8F37B5] rounded-[10px] w-full max-w-24 overflow-hidden">
-          <p className="flex items-center gap-1 p-2 font-bold text-3xl">
-            5 <MoonCoinIcon className="size-5" />
-          </p>
+        <BuyMoonCoinsButton
+          coinsQty={5}
+          price={50}
+          className="justify-self-end"
+        />
 
-          <div className="flex flex-col items-center gap-1.5 w-full">
-            <p className="flex items-center gap-1">
-              <TelegramStarIcon />
-              50
-            </p>
+        <BuyMoonCoinsButton
+          coinsQty={20}
+          price={175}
+          economy={13}
+          className="justify-self-center"
+        />
 
-            <div
-              className="bg-[#EC1EE5] p-2 w-full h-[19px]"
-              style={{ visibility: "hidden" }}
-            ></div>
-          </div>
-        </button>
-
-        <button className="flex flex-col justify-between justify-self-center items-center gap-2 bg-linear-to-b from-[#5760AD] to-[#8F37B5] rounded-[10px] w-full max-w-24 overflow-hidden">
-          <p className="flex items-center gap-1 p-2 font-bold text-3xl">
-            20 <MoonCoinIcon className="size-5" />
-          </p>
-
-          <div className="flex flex-col items-center gap-1.5 w-full">
-            <p className="flex items-center gap-1">
-              <TelegramStarIcon />
-              175
-            </p>
-
-            <div className="flex justify-center items-center bg-[#EC1EE5] w-full h-[19px]">
-              <p className="text-[8px]">Economy 13%</p>
-            </div>
-          </div>
-        </button>
-
-        <button className="flex flex-col justify-between items-center gap-2 bg-linear-to-b from-[#5760AD] to-[#8F37B5] rounded-[10px] w-full max-w-24 overflow-hidden">
-          <p className="flex items-center gap-1 p-2 font-bold text-3xl">
-            80 <MoonCoinIcon className="size-5" />
-          </p>
-
-          <div className="flex flex-col items-center gap-1.5 w-full">
-            <p className="flex items-center gap-1">
-              <TelegramStarIcon />
-              600
-            </p>
-
-            <div className="flex justify-center items-center bg-[#EC1EE5] w-full h-[19px]">
-              <p className="text-[8px]">Economy 38%</p>
-            </div>
-          </div>
-        </button>
+        <BuyMoonCoinsButton
+          coinsQty={80}
+          price={600}
+          economy={38}
+          className="justify-self-start"
+        />
       </section>
     </main>
   );
