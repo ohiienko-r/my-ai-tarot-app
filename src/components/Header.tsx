@@ -14,8 +14,6 @@ export default function Header() {
   const navigate = useNavigate();
   const lp = useLaunchParams();
 
-  console.log(pathname);
-
   return (
     <header className="flex justify-between items-center gap-2">
       <h1 className="font-semibold text-lg">
