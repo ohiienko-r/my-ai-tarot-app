@@ -11,7 +11,7 @@ interface EclipseProps extends PropsWithChildren {
 export default function Eclipse({ children, currentPath }: EclipseProps) {
   return (
     <div className="relative">
-      <div className="absolute inset-0 blur-xs rounded-full overflow-hidden">
+      <div className="absolute inset-0 blur-sm rounded-full overflow-hidden">
         <div
           className={clsx(
             "-z-1 absolute inset-0 rounded-full",
