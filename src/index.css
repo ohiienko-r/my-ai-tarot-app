@@ -38,3 +38,24 @@ button {
 @theme {
   --color-primary-purple: #14012c;
 }
+
+@keyframes eclipse {
+  0% {
+    transform: translateX(110%);
+  }
+  100% {
+    transform: translateX(-210%);
+  }
+}
+
+.eclipse {
+  background: white;
+  transform: translateX(50%);
+  filter: blur(2px);
+  animation: eclipse 5s ease-in-out infinite;
+}
+
+.eclipse.glow {
+  background-image: radial-gradient(circle at 50% 50%, transparent, #06080d),
+    linear-gradient(#ea850f, #ffc700);
+}

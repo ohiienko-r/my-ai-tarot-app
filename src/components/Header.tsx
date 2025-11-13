@@ -39,6 +39,7 @@ export default function Header() {
         <Balance
           balance={100}
           className={clsx(pathname === ROUTES_NAMES.ROOT && "pl-3")}
+          currentPath={pathname}
         />
       </button>
     </header>
