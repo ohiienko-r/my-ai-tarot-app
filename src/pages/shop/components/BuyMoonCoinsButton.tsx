@@ -23,7 +23,7 @@ export default function BuyMoonCoinsButton({
       disabled={disabled}
       {...rest}
       className={clsx(
-        "flex flex-col justify-between items-center gap-2 bg-linear-to-b from-[#5760AD] to-[#8F37B5] rounded-[10px] w-full max-w-24 overflow-hidden",
+        "flex flex-col justify-between items-center gap-2 bg-linear-to-b from-[#5760AD] to-[#8F37B5] rounded-lg w-full overflow-hidden",
         className,
         disabled && "grayscale-100"
       )}
