@@ -11,7 +11,7 @@ export default function Navigation() {
   const navigate = useNavigate();
 
   return (
-    <section className="flex flex-col flex-1 justify-between gap-3">
+    <nav className="flex flex-col flex-1 justify-between gap-3">
       <div className="flex flex-col gap-3">
         <NavButton
           index={0}
@@ -59,6 +59,6 @@ export default function Navigation() {
           <CircleQuestionMarkIcon className="size-4" />
         </span>
       </button>
-    </section>
+    </nav>
   );
 }

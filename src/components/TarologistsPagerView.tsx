@@ -7,10 +7,9 @@ interface TarologistsPagerViewProps {
 export default function TarologistsPagerView({
   tarologists,
 }: TarologistsPagerViewProps) {
-  // TODO: update wrapping ul to be a swipable pager
   return (
     <section className="flex flex-col gap-3 w-full">
-      <ul className="flex items-center w-full h-fit">
+      <ul className="flex items-center w-full h-fit cursor-grab">
         {tarologists.map((tarologist) => (
           <li
             key={tarologist.id}
