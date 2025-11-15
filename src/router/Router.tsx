@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import { ROUTES_NAMES } from "../constants/router";
 
 import MainLayout from "../layouts/MainLayout";
+import SecondaryLayout from "../layouts/SecondaryLayout";
 
 import HomePage from "../pages/home/Home";
 import SettingsPage from "../pages/settings/Settings";
@@ -25,9 +26,14 @@ export default function Router() {
           <Route path={ROUTES_NAMES.SHOP} element={<ShopPage />} />
         </Route>
 
-        <Route path={ROUTES_NAMES.SETTINGS} element={<SettingsPage />} />
+        <Route element={<SecondaryLayout />}>
+          <Route path={ROUTES_NAMES.SETTINGS} element={<SettingsPage />} />
 
-        <Route path={ROUTES_NAMES.INFORMATION} element={<InformationPage />} />
+          <Route
+            path={ROUTES_NAMES.INFORMATION}
+            element={<InformationPage />}
+          />
+        </Route>
       </Routes>
     </BrowserRouter>
   );
