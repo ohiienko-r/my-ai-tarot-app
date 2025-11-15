@@ -3,11 +3,9 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import { ROUTES_NAMES } from "../constants/router";
 
 import HomePage from "../pages/home/Home";
-import CardOfTheDayPage from "../pages/card-of-the-day/CardOfTheDay";
-import YesNoPage from "../pages/yes-no/YesNo";
-import AskQuestionPage from "../pages/ask-question/AskQuestion";
-import InformationPage from "../pages/information/Information";
+import SpreadDetailsPage from "../pages/spread-details/SpreadDetails";
 import ShopPage from "../pages/shop/Shop";
+import InformationPage from "../pages/information/Information";
 
 export default function Router() {
   return (
@@ -16,17 +14,13 @@ export default function Router() {
         <Route index element={<HomePage />} />
 
         <Route
-          path={ROUTES_NAMES.CARD_OF_THE_DAY}
-          element={<CardOfTheDayPage />}
+          path={ROUTES_NAMES.SPREAD_DETAILS}
+          element={<SpreadDetailsPage />}
         />
 
-        <Route path={ROUTES_NAMES.YES_NO} element={<YesNoPage />} />
-
-        <Route path={ROUTES_NAMES.ASK_QUESTION} element={<AskQuestionPage />} />
+        <Route path={ROUTES_NAMES.SHOP} element={<ShopPage />} />
 
         <Route path={ROUTES_NAMES.INFORMATION} element={<InformationPage />} />
-
-        <Route path={ROUTES_NAMES.SHOP} element={<ShopPage />} />
       </Routes>
     </BrowserRouter>
   );

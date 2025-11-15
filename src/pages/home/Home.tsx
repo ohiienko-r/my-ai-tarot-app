@@ -11,7 +11,7 @@ export default function HomePage() {
 
       <TarologistsPagerView tarologists={TAROLOGISTS} />
 
-      <Navigation />
+      <Navigation spreads={TAROLOGISTS[0].spreads} />
     </main>
   );
 }
