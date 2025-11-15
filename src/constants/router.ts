@@ -7,4 +7,5 @@ export const ROUTES_NAMES = {
   ABOUT: "/about",
   SHOP: "/shop",
   SPREAD_DETAILS: "/spread-details",
+  SETTINGS: "/settings",
 } as const;

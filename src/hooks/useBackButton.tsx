@@ -3,10 +3,12 @@ import { useNavigate } from "react-router";
 import { backButton } from "@tma.js/sdk-react";
 
 interface UseBackButtonProps {
+  visible?: boolean;
   customCallback?: () => void;
 }
 
 export default function useBackButton({
+  visible = true,
   customCallback,
 }: UseBackButtonProps = {}) {
   const navigate = useNavigate();
@@ -14,11 +16,16 @@ export default function useBackButton({
   const handleGoBack = useCallback(() => navigate(-1), [navigate]);
 
   useEffect(() => {
-    backButton.show();
+    if (visible) {
+      backButton.show();
+    } else {
+      backButton.hide();
+    }
+
     return () => {
       backButton.hide();
     };
-  }, []);
+  }, [visible]);
 
   useEffect(() => {
     if (customCallback) {

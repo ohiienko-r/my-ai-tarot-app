@@ -1,19 +1,12 @@
-import useBackButton from "../../hooks/useBackButton";
-
 import { Button } from "../../components/Button";
 import BuyMoonCoinsButton from "./components/BuyMoonCoinsButton";
-import Header from "../../components/Header";
 
 import MoonCoinIcon from "../../icons/MoonCoinIcon";
 import TelegramStarIcon from "../../icons/TelegramStarIcon";
 
 export default function ShopPage() {
-  useBackButton();
-
   return (
-    <main className="flex flex-col gap-8 p-2 size-full overflow-y-auto">
-      <Header />
-
+    <div className="flex flex-col gap-8 overflow-y-auto">
       <section className="gap-3 grid grid-cols-[repeat(auto-fit,minmax(96px,1fr))] grid-rows-auto px-2">
         <h3 className="col-span-full row-start-1 font-semibold text-sm">
           Buy 💰
@@ -79,6 +72,6 @@ export default function ShopPage() {
           </span>
         </Button>
       </section>
-    </main>
+    </div>
   );
 }
