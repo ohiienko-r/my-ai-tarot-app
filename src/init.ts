@@ -4,6 +4,7 @@ import {
   viewport,
   closingBehavior,
   swipeBehavior,
+  settingsButton,
   mainButton,
   init as initSDK,
   miniApp,
@@ -44,4 +45,5 @@ export async function init() {
   }
 
   mainButton.mount.ifAvailable();
+  settingsButton.mount.ifAvailable();
 }

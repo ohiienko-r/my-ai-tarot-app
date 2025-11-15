@@ -12,11 +12,11 @@ export default function ShopPage() {
           Buy 💰
         </h3>
 
-        <BuyMoonCoinsButton coinsQty={5} price={50} />
+        <BuyMoonCoinsButton coinsQty={5} price={50} disabled />
 
-        <BuyMoonCoinsButton coinsQty={20} price={175} economy={13} />
+        <BuyMoonCoinsButton coinsQty={20} price={175} economy={13} disabled />
 
-        <BuyMoonCoinsButton coinsQty={80} price={600} economy={38} />
+        <BuyMoonCoinsButton coinsQty={80} price={600} economy={38} disabled />
       </section>
 
       <section className="flex flex-col gap-3 px-2">
@@ -27,6 +27,7 @@ export default function ShopPage() {
             variant={"secondary"}
             size={"xl"}
             className="justify-start gap-4"
+            disabled
           >
             <span className="flex items-center gap-0.5 font-semibold text-xl">
               3 <MoonCoinIcon />
@@ -38,6 +39,7 @@ export default function ShopPage() {
             variant={"secondary"}
             size={"xl"}
             className="justify-start gap-4"
+            disabled
           >
             <span className="flex items-center gap-0.5 font-semibold text-xl">
               3 <MoonCoinIcon />
@@ -49,6 +51,7 @@ export default function ShopPage() {
             variant={"secondary"}
             size={"xl"}
             className="justify-start gap-4"
+            disabled
           >
             <span className="flex items-center gap-0.5 font-semibold text-xl">
               3 <MoonCoinIcon />
@@ -65,6 +68,7 @@ export default function ShopPage() {
           variant={"secondary"}
           size={"xl"}
           className="justify-between gap-4"
+          disabled
         >
           <span className="flex justify-between items-center gap-4 w-full">
             With Telegram Stars

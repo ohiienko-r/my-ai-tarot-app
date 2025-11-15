@@ -1,5 +1,6 @@
 import { Outlet, useLocation } from "react-router";
 import useBackButton from "../hooks/useBackButton";
+import useSettingsButton from "../hooks/useSettingsButton";
 
 import { ROUTES_NAMES } from "../constants/router";
 
@@ -9,6 +10,7 @@ import Header from "../components/Header";
 export default function MainLayout() {
   const { pathname } = useLocation();
   useBackButton({ visible: pathname !== ROUTES_NAMES.ROOT });
+  useSettingsButton();
 
   return (
     <SafeAreaView>
