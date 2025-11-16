@@ -1,7 +1,9 @@
+import type { Tarologist } from "../types/tarologists";
+
 import Eva from "../assets/eva.png";
 import EvasBg from "../assets/galaxy.png";
 
-export const TAROLOGISTS = [
+export const TAROLOGISTS: Tarologist[] = [
   {
     id: "t0",
     name: "Eva",
@@ -11,6 +13,7 @@ export const TAROLOGISTS = [
       {
         id: "s0",
         name: "Card of the day",
+        cards: 1,
         cost: 2,
         description: `'Card of the Day' is a Tarot spread where one card is
         drawn to provide advice or a prediction for the current day. 
@@ -20,6 +23,7 @@ export const TAROLOGISTS = [
       {
         id: "s1",
         name: "Yes/No",
+        cards: 1,
         cost: 3,
         description: `The 'Yes / No' tarot spread is a simple and direct 
         method used to get a clear answer to a specific question. 
@@ -29,6 +33,7 @@ export const TAROLOGISTS = [
       {
         id: "s2",
         name: "Ask a question",
+        cards: 3,
         cost: 5,
         description: `The classic three-card tarot spread is a simple yet highly 
         effective method of divination used to gain a deeper understanding of a situation. 

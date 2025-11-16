@@ -8,6 +8,7 @@ export interface Tarologist {
 
 export interface Spread {
   id: string;
+  cards: number;
   name: string;
   cost: number;
   description: string;
