@@ -29,7 +29,7 @@ export default function SpreadDetailsPage() {
         )}
       >
         {Array.from({ length: spread?.cards }).map((_, index) => (
-          <Card key={index} className={clsx(spread?.cards > 1 && "w-[35%]")} />
+          <Card key={index} className={clsx(spread?.cards > 1 && "w-1/3")} />
         ))}
       </section>
 
