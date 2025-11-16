@@ -25,19 +25,12 @@ export default function SpreadDetailsPage() {
     <main className="flex flex-col items-center gap-4 size-full overflow-y-auto transition-all">
       <section
         className={clsx(
-          "justify-items-center gap-2 grid grid-cols-[repeat(auto-fit,minmax(35%,1fr))] w-full",
-          !descriptionVisible && "h-full"
+          "flex flex-wrap flex-1 justify-center items-center gap-2"
         )}
       >
-        {Array.from({ length: spread?.cards }).map((_, index) => {
-          console.log(index === 2);
-          return (
-            <Card
-              key={index}
-              className={clsx(index === 2 && "col-span-full w-[35%]")}
-            />
-          );
-        })}
+        {Array.from({ length: spread?.cards }).map((_, index) => (
+          <Card key={index} className={clsx(spread?.cards > 1 && "w-[35%]")} />
+        ))}
       </section>
 
       <Activity mode={descriptionVisible ? "visible" : "hidden"}>
